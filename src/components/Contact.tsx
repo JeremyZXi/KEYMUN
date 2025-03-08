@@ -62,15 +62,15 @@ const SocialMediaContact = () => {
   ];
 
   const socialLinks = [
-    { icon: faInstagram, text: 'Instagram', link: 'https://www.instagram.com/nest_organization/', info: 'KMUN' },
-    { icon: faInstagram, text: 'Instagram', link: 'https://www.instagram.com/nest_organization/', info: 'KMUN' },
+    { icon: faInstagram, text: 'Instagram', link: 'https://www.instagram.com/nest_organization/', info: 'KEYMUN' },
+    { icon: faInstagram, text: 'Instagram', link: 'https://www.instagram.com/nest_organization/', info: 'KEYMUN' },
   ];
 
   const renderContactInfo = (contact, index) => (
       <motion.a
           href={contact.link}
           key={index}
-          className="flex flex-col items-center justify-center p-8 bg-[#20273a] rounded-lg h-full hover:bg-gray-700 transition-colors duration-300"
+          className="flex flex-col items-center justify-center p-8 bg-[#192236] rounded-lg h-full hover:bg-gray-700 transition-colors duration-300"
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -84,7 +84,7 @@ const SocialMediaContact = () => {
   const renderSocialLink = (social, index) => (
       <motion.a
           href={social.link}
-          className="flex flex-col items-center justify-center p-4 bg-[#20273a] rounded-lg hover:bg-gray-700 transition-colors duration-300 h-full"
+          className="flex flex-col items-center justify-center p-4 bg-[#192236] rounded-lg hover:bg-gray-700 transition-colors duration-300 h-full"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           variants={itemVariants}

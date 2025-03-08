@@ -49,7 +49,7 @@ const Navbar = () => {
                 <a href="/" className={`${scrolled ? 'text-black hover:text-blue-700' : 'text-white hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>Home</a>
                 <a href="/events" className={`${scrolled ? 'text-gray-700 hover:text-blue-700' : 'text-gray-300 hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>Events</a>
                 <a href="/resources" className={`${scrolled ? 'text-gray-700 hover:text-blue-700' : 'text-gray-300 hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>Resources</a>
-                <a href="/#contact" className={`${scrolled ? 'text-gray-700 hover:text-blue-700' : 'text-gray-300 hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>Contact</a>
+                <a href="/about-us" className={`${scrolled ? 'text-gray-700 hover:text-blue-700' : 'text-gray-300 hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>About</a>
               </div>
             </div>
 

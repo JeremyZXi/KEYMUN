@@ -14,7 +14,7 @@ const Footer = () => {
         { name: 'some name', url: 'https://fin-teens.com/' },
     ];
     return (
-        <footer className="bg-[#20273a] text-white py-8 mt-8">
+        <footer className="bg-[#192236] text-white py-8 mt-8">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div>
@@ -23,7 +23,7 @@ const Footer = () => {
                         <div className="flex items-center space-x-2">
                             <a href="https://keycas.cn" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
                                 <p className="text-sm">Powered by KeyCAS</p>
-                                <img src="https://keycas.cn/assests/KeyArchlogo.svg" alt="KeyCAS Logo" className="h-4 w-auto"/>
+                                <img src="assets/KeyCAS.svg" alt="KeyCAS Logo" className="h-4 w-auto"/>
                             </a>
                         </div>
 

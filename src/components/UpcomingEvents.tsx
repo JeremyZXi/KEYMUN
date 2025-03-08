@@ -41,7 +41,7 @@ const UpcomingEvents = () => {
                 <p className="text-gray-600 mb-4">{event.description}</p>
                 <a
                   href={`/events`}
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+                  className="inline-block bg-[#192236] text-white px-4 py-2 rounded hover:bg-[#9e0a3b] transition duration-300"
                 >
                   Learn More
                 </a>

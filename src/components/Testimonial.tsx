@@ -67,7 +67,7 @@ const TestimonialSlider = ({ backgroundImage = "https://placehold.co/600x400" })
                 }}
             >
                 {/* Blue Overlay */}
-                <div className="absolute inset-0 bg-[#20273a] opacity-90"></div>
+                <div className="absolute inset-0 bg-[#192236] opacity-90"></div>
             </div>
 
             <div className="container px-5 mx-auto relative z-10">
