@@ -54,7 +54,7 @@ const Footer = () => {
 
                 <div className="mt-8 pt-8 border-t border-gray-700">
                     <p className="text-sm text-center">
-                        KEYMUN 2025
+                        KEYMUN 2025. All Rights Reserved
                     </p>
                 </div>
 
