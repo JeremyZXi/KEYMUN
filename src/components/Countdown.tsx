@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = () => {
     // Developer can change this target date (format: YY/MM/DD/HH/MM/SS)
-    const targetDateString = "25/9/13/00/00/00"; // Example: Christmas 2025
+    const targetDateString = "25/9/13/00/00/00"; // Example: September 13, 2025
 
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
@@ -57,26 +57,26 @@ const CountdownTimer = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center p-8" style={{ backgroundColor: "#192236" }}>
-            <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold mb-4 text-white">KEYMUN starts in</h2>
-                <div className="h-1 w-20 bg-[#9e0a3b] rounded mx-auto"></div>
+        <div className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 w-full" style={{ backgroundColor: "#192236" }}>
+            <div className="text-center mb-6 sm:mb-8 md:mb-12">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4 text-white">KEYMUN starts in</h2>
+                <div className="h-1 w-16 sm:w-20 bg-[#9e0a3b] rounded mx-auto"></div>
             </div>
 
             {isExpired ? (
-                <div className="text-xl font-bold p-4 rounded-md text-white bg-opacity-80" style={{ backgroundColor: "#9e0a3b" }}>
+                <div className="text-lg sm:text-xl font-bold p-3 sm:p-4 rounded-md text-white bg-opacity-80" style={{ backgroundColor: "#9e0a3b" }}>
                     KEYMUN is now live!
                 </div>
             ) : (
                 <>
-                    <div className="flex space-x-4 mb-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
                         <TimeBlock value={timeLeft.days} label="Days" />
                         <TimeBlock value={timeLeft.hours} label="Hours" />
                         <TimeBlock value={timeLeft.minutes} label="Minutes" />
                         <TimeBlock value={timeLeft.seconds} label="Seconds" />
                     </div>
 
-                    <div className="text-sm text-gray-300 mt-2">
+                    <div className="text-xs sm:text-sm text-gray-300 mt-2">
                         {/*Counting down to: {targetDateString.replace(/\//g, '-')}*/}
                     </div>
                 </>
@@ -88,11 +88,11 @@ const CountdownTimer = () => {
 const TimeBlock = ({ value, label }) => {
     return (
         <div className="flex flex-col items-center">
-            <div className="w-32 h-32 flex items-center justify-center text-5xl font-bold rounded-md"
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 flex items-center justify-center text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold rounded-md"
                  style={{ backgroundColor: "#9e0a3b", color: "white" }}>
                 {value < 10 ? `0${value}` : value}
             </div>
-            <div className="text-sm mt-2 text-white">{label}</div>
+            <div className="text-xs sm:text-sm mt-1 sm:mt-2 text-white">{label}</div>
         </div>
     );
 };
