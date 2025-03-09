@@ -76,12 +76,12 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Navigation Menu */}
-          <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
-            <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${scrolled ? 'bg-white' : 'bg-slate-900/80 backdrop-blur-sm'}`}>
-              <a href="/" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-black' : 'text-white'}`}>Home</a>
-              <a href="/events" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}>Events</a>
-              <a href="/resources" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}>Resources</a>
-              <a href="/about-us" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}>Contact</a>
+          <div className={`${isOpen ? 'block' : 'hidden'} md:hidden max-h-screen overflow-y-auto`}>
+            <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${scrolled ? 'bg-white' : 'bg-slate-900/80 backdrop-blur-sm'} w-full left-0 right-0`}>
+              <a href="/" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-black' : 'text-white'}`} onClick={() => setIsOpen(false)}>Home</a>
+              <a href="/events" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`} onClick={() => setIsOpen(false)}>Events</a>
+              <a href="/resources" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`} onClick={() => setIsOpen(false)}>Resources</a>
+              <a href="/about-us" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`} onClick={() => setIsOpen(false)}>Contact</a>
             </div>
           </div>
         </nav>
