@@ -23,9 +23,21 @@ const Navbar = () => {
     };
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   return (
-      <div className="relative">
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <>
+        <nav className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
@@ -55,7 +67,7 @@ const Navbar = () => {
               </div>
 
               {/* Mobile menu button */}
-              <div className="-mr-2 flex md:hidden">
+              <div className="flex md:hidden">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     type="button"
@@ -75,17 +87,51 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Navigation Menu */}
-          <div className={`${isOpen ? 'block' : 'hidden'} md:hidden max-h-screen overflow-y-auto`}>
-            <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${scrolled ? 'bg-white' : 'bg-slate-900/80 backdrop-blur-sm'} w-full left-0 right-0`}>
-              <a href="/" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-black' : 'text-white'}`} onClick={() => setIsOpen(false)}>Home</a>
-              <a href="/events" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`} onClick={() => setIsOpen(false)}>Events</a>
-              <a href="/resources" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`} onClick={() => setIsOpen(false)}>Resources</a>
-              <a href="/about-us" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`} onClick={() => setIsOpen(false)}>Contact</a>
+          {/* Mobile Navigation Menu - Position fixed to viewport */}
+          <div
+              className={`${isOpen ? 'fixed' : 'hidden'} md:hidden inset-0 top-16 bg-black bg-opacity-30`}
+              onClick={() => setIsOpen(false)}
+          >
+            <div
+                className={`${scrolled ? 'bg-white' : 'bg-slate-900 backdrop-blur-sm'} absolute top-0 left-0 right-0`}
+                onClick={(e) => e.stopPropagation()}
+            >
+              <div className="px-4 pt-2 pb-3 space-y-1">
+                <a
+                    href="/"
+                    className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-black' : 'text-white'}`}
+                    onClick={() => setIsOpen(false)}
+                >
+                  Home
+                </a>
+                <a
+                    href="/events"
+                    className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}
+                    onClick={() => setIsOpen(false)}
+                >
+                  Events
+                </a>
+                <a
+                    href="/resources"
+                    className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}
+                    onClick={() => setIsOpen(false)}
+                >
+                  Resources
+                </a>
+                <a
+                    href="/about-us"
+                    className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}
+                    onClick={() => setIsOpen(false)}
+                >
+                  About
+                </a>
+              </div>
             </div>
           </div>
         </nav>
-      </div>
+        {/* Add an invisible spacer to prevent content from being hidden under the navbar */}
+        <div className="h-16"></div>
+      </>
   );
 };
 
