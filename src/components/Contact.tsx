@@ -46,24 +46,12 @@ const SocialMediaContact = () => {
       text: 'Email',
       info: 'huici.yu@student.keystoneacademy.cn',
       link: 'mailto:huici.yu@student.keystoneacademy.cn'
-    },
-    {
-      icon: faEnvelope,
-      text: 'Email',
-      info: 'huici.yu@student.keystoneacademy.cn',
-      link: 'mailto:huici.yu@student.keystoneacademy.cn'
-    },
-    {
-      icon: faEnvelope,
-      text: 'Email',
-      info: 'huici.yu@student.keystoneacademy.cn',
-      link: 'mailto:huici.yu@student.keystoneacademy.cn'
     }
   ];
+  const contactNum = contactInfo.length;
 
   const socialLinks = [
-    { icon: faInstagram, text: 'Instagram', link: 'https://www.instagram.com/nest_organization/', info: 'KEYMUN' },
-    { icon: faInstagram, text: 'Instagram', link: 'https://www.instagram.com/nest_organization/', info: 'KEYMUN' },
+    /*{ icon: faInstagram, text: 'Instagram', link: 'https://www.instagram.com/nest_organization/', info: 'KEYMUN' },*/
   ];
 
   const renderContactInfo = (contact, index) => (
@@ -120,7 +108,7 @@ const SocialMediaContact = () => {
 
           {/* Contact Info Row */}
           <motion.div
-              className="grid grid-cols-3 md:grid-cols-3 gap-6 mb-12"
+              className="grid grid-cols-1 md:grid-cols-1 gap-6 mb-12"
               variants={containerVariants}
           >
             {contactInfo.map((contact, index) => renderContactInfo(contact, index))}
