@@ -4,23 +4,7 @@ import Footer from "../components/Footer.tsx";
 
 const Resources = () => {
   const resources = [
-    {
-      title: "Rules of Procedure",
-      description: "Complete guide to MUN conference procedures and protocols",
-      type: "PDF",
-      size: "2.4 MB",
-      icon: FileText,
-      filePath: "/assets/rules_of_procedure.pdf" // Local file path or URL
-    },
-    {
-      title: "Position Paper Template",
-      description: "Standard template for writing position papers",
-      type: "DOCX",
-      size: "523 KB",
-      icon: FileText,
-      filePath: "/assets/position_paper_template.docx"
-    },
-    {
+    /*{
       title: "UN Charter",
       description: "UN Charter in Chinese",
       type: "PDF",
@@ -35,7 +19,7 @@ const Resources = () => {
       size: "Online",
       icon: Globe2,
       filePath: "https://example.com/country-profiles" // URL for web resource
-    }
+    }*/
   ];
 
   // Function to handle file download
