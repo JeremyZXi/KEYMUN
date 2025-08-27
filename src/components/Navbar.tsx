@@ -30,15 +30,12 @@ const Navbar = () => {
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center">
                 <a href="/" className="flex items-center space-x-2">
-                  {/* Logo placeholder that changes with scroll */}
+                  {/* Fixed image paths and styling */}
                   <img
-                      src={scrolled ? "assets/keymun_color_logo.png" : "assets/keymun_bw_logo.png"}
-                      alt="ModelUN Logo"
-                      className="h-20 w-20"
-                      style={{
-
-                        backgroundColor: scrolled ? '#000' : '#4299e1'
-                      }}
+                      src={scrolled ? "/assets/keymun_color_logo.png" : "/assets/keymun_bw_logo.png"}
+                      alt="KEYMUN Logo"
+                      className="h-20"
+                      // Removed the background styling that was hiding the logo
                   />
                   <span className={`font-bold text-xl ${scrolled ? 'text-black' : 'text-white'}`}>KEYMUN</span>
                 </a>
@@ -48,7 +45,7 @@ const Navbar = () => {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <a href="/" className={`${scrolled ? 'text-black hover:text-blue-700' : 'text-white hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>Home</a>
-                  <a href="/events" className={`${scrolled ? 'text-gray-700 hover:text-blue-700' : 'text-gray-300 hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>Events</a>
+                  <a href="/committees" className={`${scrolled ? 'text-gray-700 hover:text-blue-700' : 'text-gray-300 hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>Committees</a>
                   <a href="/resources" className={`${scrolled ? 'text-gray-700 hover:text-blue-700' : 'text-gray-300 hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>Resources</a>
                   <a href="/about-us" className={`${scrolled ? 'text-gray-700 hover:text-blue-700' : 'text-gray-300 hover:text-blue-500'} px-3 py-2 rounded-md text-sm font-medium`}>About</a>
                 </div>
@@ -79,7 +76,7 @@ const Navbar = () => {
           <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
             <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${scrolled ? 'bg-white' : 'bg-slate-900/80 backdrop-blur-sm'}`}>
               <a href="/" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-black' : 'text-white'}`}>Home</a>
-              <a href="/events" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}>Events</a>
+              <a href="/committees" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}>Committees</a>
               <a href="/resources" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}>Resources</a>
               <a href="/about-us" className={`block px-3 py-2 rounded-md text-base font-medium ${scrolled ? 'text-gray-700' : 'text-gray-300'}`}>Contact</a>
             </div>

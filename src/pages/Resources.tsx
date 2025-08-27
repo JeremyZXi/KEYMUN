@@ -74,7 +74,7 @@ const Resources = () => {
                       {resource.type} • {resource.size}
                     </span>
                         <button
-                            className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+                            className="flex items-center space-x-2 bg-[#192236] text-white px-4 py-2 rounded hover:bg-[#9e0a3b] transition duration-300"
                             onClick={() => handleDownload(resource.filePath, `${resource.title}.${resource.type.toLowerCase()}`)}
                             disabled={!resource.filePath || resource.type === "Web Resource"}
                         >

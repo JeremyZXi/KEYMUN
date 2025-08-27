@@ -13,13 +13,16 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@tailwindcss/typography": "^0.5.16",
     "countdown.js": "^0.0.6",
     "framer-motion": "^12.4.10",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.16.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^6.22.3",
+    "remark-gfm": "^4.0.1",
     "swiper": "^11.2.5"
   },
   "devDependencies": {

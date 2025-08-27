@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import UpcomingEvents from '../components/UpcomingEvents';
+import CommitteeHighlights from "../components/UpcomingEvents.tsx";
 import Contact from '../components/Contact';
 import Testimonial from "../components/Testimonial.tsx";
 import Footer from "../components/Footer.tsx";
@@ -11,8 +11,8 @@ const Home = () => {
     <div>
       <Hero />
         <CountdownTimer/>
-      <UpcomingEvents />
-        <Testimonial />
+      <CommitteeHighlights />
+        {/*<Testimonial />*/}
       <Contact />
         <Footer/>
 

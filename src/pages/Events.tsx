@@ -1,69 +1,57 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { committees } from '../data/committeeData';
 
-const Events = () => {
-  const events = [
-    {
-      title: "International Security Conference",
-      date: "April 15-17, 2024",
-      location: "Keystone Academy, Beijing",
-      description: "A comprehensive three-day conference focusing on global security challenges and diplomatic solutions.",
-      image: "https://placehold.co/600x400",
-      committees: ["Security Council", "NATO", "Crisis Committee"],
-      link: "https://keycas.cn"
-    },
-    {
-      title: "Climate Action Summit",
-      date: "May 20-22, 2024",
-      location: "Keystone Academy, Beijing",
-      description: "Address pressing environmental issues and develop innovative solutions for climate change.",
-      image: "https://placehold.co/600x400",
-      committees: ["UNEP", "WHO", "Economic and Social Council"],
-      link: "https://keycas.cn"
-    }
-  ];
-
+const Committees = () => {
   return (
-    <div>
-      <div className="bg-slate-900 text-white py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold mb-4">Upcoming Events</h1>
-          <p className="text-gray-300">Discover our upcoming conferences and diplomatic simulations</p>
+      <div>
+        <div className="bg-slate-900 text-white py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl font-bold mb-4">Committees</h1>
+            <p className="text-gray-300">Explore our committees for the upcoming conference</p>
+          </div>
         </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="space-y-12">
-          {events.map((event, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="md:flex">
-                <div className="md:flex-shrink-0">
-                  <img className="h-full w-full object-cover md:w-48" src={event.image} alt={event.title} />
-                </div>
-                <div className="p-8">
-                  <h2 className="text-2xl font-bold mb-2">{event.title}</h2>
-                  <p className="text-gray-600 mb-4">{event.date} | {event.location}</p>
-                  <p className="text-gray-700 mb-4">{event.description}</p>
-                  <div className="mb-4">
-                    <h3 className="font-semibold mb-2">Committees:</h3>
-                    <ul className="list-disc list-inside text-gray-600">
-                      {event.committees.map((committee, idx) => (
-                        <li key={idx}>{committee}</li>
-                      ))}
-                    </ul>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="space-y-12">
+            {committees.map((committee, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <div className="md:flex">
+
+                    <div className="p-8">
+                      <h2 className="text-2xl font-bold mb-2">{committee.name}</h2>
+                      <p className="text-gray-600 mb-2">Topic: {committee.topic}</p>
+
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <h3 className="font-semibold text-gray-700">Chair</h3>
+                          <p>{committee.chair}</p>
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-700">Co-Chair</h3>
+                          <p>{committee.coChair}</p>
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-700">Working Language</h3>
+                          <p>{committee.workLanguage}</p>
+                        </div>
+                      </div>
+
+                      <Link to={`/committees/${committee.id}`}>
+                        <button className="inline-block bg-[#192236] text-white px-4 py-2 rounded hover:bg-[#9e0a3b] transition duration-300">
+                          View Details
+                        </button>
+                      </Link>
+                    </div>
                   </div>
-                  <a href={event.link}>
-                  <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">
-                    Register Now
-                  </button>
-                  </a>
                 </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 
-export default Events;
+export default Committees;

@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
 
     const quickLinks = [
-        { name: 'About Us', url: '/about' },
+        { name: 'About Us', url: '/about-us' },
 
         { name: 'Resources', url: '/resources' },
 

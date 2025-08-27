@@ -18,7 +18,7 @@ const Hero = () => {
             Keystone Model United Nation
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Topic of the conference
+
           </p>
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
                 November 7-9, 2025  @Keystone Academy, Beijing
