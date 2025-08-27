@@ -21,7 +21,7 @@ const Hero = () => {
             Topic of the conference
           </p>
             <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
-                September/10/2025 @Keystone Academy, Beijing
+                November 7-9, 2025  @Keystone Academy, Beijing
             </h3>
             {/*<a
             href="#upcoming-events"

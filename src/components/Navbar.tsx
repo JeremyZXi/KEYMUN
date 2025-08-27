@@ -32,15 +32,15 @@ const Navbar = () => {
                 <a href="/" className="flex items-center space-x-2">
                   {/* Logo placeholder that changes with scroll */}
                   <img
-                      src={scrolled ? "/api/placeholder/32/32" : "/api/placeholder/32/32"}
+                      src={scrolled ? "assets/keymun_color_logo.png" : "assets/keymun_bw_logo.png"}
                       alt="ModelUN Logo"
-                      className="h-8 w-8"
+                      className="h-20 w-20"
                       style={{
-                        filter: scrolled ? 'invert(0%)' : 'invert(100%)',
+
                         backgroundColor: scrolled ? '#000' : '#4299e1'
                       }}
                   />
-                  <span className={`font-bold text-xl ${scrolled ? 'text-black' : 'text-white'}`}>KMUN</span>
+                  <span className={`font-bold text-xl ${scrolled ? 'text-black' : 'text-white'}`}>KEYMUN</span>
                 </a>
               </div>
 

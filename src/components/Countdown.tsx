@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = () => {
     // Developer can change this target date (format: YY/MM/DD/HH/MM/SS)
-    const targetDateString = "25/9/13/00/00/00"; // Example: September 13, 2025
+    const targetDateString = "25/11/7/00/00/00"; // Example: September 13, 2025
 
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
