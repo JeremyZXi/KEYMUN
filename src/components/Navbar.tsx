@@ -32,7 +32,7 @@ const Navbar = () => {
                 <a href="/" className="flex items-center space-x-2">
                   {/* Fixed image paths and styling */}
                   <img
-                      src={scrolled ? "/assets/keymun_color_logo.png" : "/assets/keymun_bw_logo.png"}
+                      src={scrolled ? "/assets/keymun_color_logo.png" : "/assets/keymun_color_logo.png"}
                       alt="KEYMUN Logo"
                       className="h-20"
                       // Removed the background styling that was hiding the logo
