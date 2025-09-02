@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { committees } from '../data/committeeData';
 import { Languages, FileText, User, Users } from 'lucide-react';
+import Footer from "../components/Footer.tsx";
 
 
 const CommitteeDetail = () => {
@@ -82,6 +83,7 @@ const CommitteeDetail = () => {
 
 
         </div>
+            <Footer/>
         </div>
     );
 };

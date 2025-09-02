@@ -7,8 +7,9 @@ import Committees from "./pages/Events.tsx";
 import Resources from './pages/Resources';
 import About from "./pages/About";
 import CommitteeDetail from './pages/CommitteeDetail';
-
+import Registration from "./pages/Registration.tsx";
 function App() {
+
   return (
       <Router>
         <div className="min-h-screen bg-gray-50">
@@ -18,6 +19,9 @@ function App() {
             <Route path="/committees" element={<Committees />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/about-us" element={<About />} />
+
+
+              <Route path="/registration" element={<Registration />} />
             <Route path="/committees/:id" element={<CommitteeDetail />} />
           </Routes>
         </div>

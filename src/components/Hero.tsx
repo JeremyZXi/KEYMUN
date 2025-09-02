@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from 'react';
 
+const ACCENT = '#005694';
+
 const Hero = () => {
+    const quickLinks = [
+        { label: 'Committees', href: '/committees' },
+        { label: 'Resources', href: '/resources' },
+        { label: 'About', href: '/about-us' },
+        { label: 'Register', href: '/register' },
+    ];
+
     return (
         <div className="relative h-screen">
             <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                    backgroundImage: 'url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")',
+                    backgroundImage:
+                        'url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80")',
                 }}
             >
-                <div className="absolute inset-0 bg-black/60"></div>
+                <div className="absolute inset-0 bg-black/60" />
             </div>
 
             <div className="relative h-full flex items-center justify-center">
@@ -21,10 +31,44 @@ const Hero = () => {
                         November 7–9, 2025 @ Keystone Academy, Beijing
                     </h3>
 
-                    {/* Countdown merged + styled to match hero */}
+                    {/* Countdown */}
                     <div className="max-w-3xl mx-auto">
                         <CountdownTimer targetDateString="25/11/7/00/00/00" />
                     </div>
+
+                    {/* Quick Links */}
+                    <QuickLinks links={quickLinks} />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const QuickLinks = ({ links = [] }) => {
+    if (!links.length) return null;
+
+    return (
+        <div className="mt-10">
+            <div className="mx-auto max-w-3xl">
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                    {links.map((l) => (
+                        <a
+                            key={l.href}
+                            href={l.href}
+                            className="
+                inline-flex items-center justify-center
+                px-5 py-2.5 md:px-6 md:py-3
+                rounded-md
+                text-sm md:text-base font-semibold
+                border border-white text-white
+                transition-all duration-300
+                hover:bg-white hover:text-black
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70
+              "
+                        >
+                            {l.label}
+                        </a>
+                    ))}
                 </div>
             </div>
         </div>
@@ -33,9 +77,8 @@ const Hero = () => {
 
 /**
  * CountdownTimer
- * targetDateString format: "YY/MM/DD/HH/MM/SS" (e.g., "25/11/7/00/00/00" → Nov 7, 2025 00:00:00 local time)
  */
-const CountdownTimer = ({ targetDateString = "25/11/7/00/00/00" }) => {
+const CountdownTimer = ({ targetDateString = '25/11/7/00/00/00' }) => {
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
     const [isExpired, setIsExpired] = useState(false);
 
