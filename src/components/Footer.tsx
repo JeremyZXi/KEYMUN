@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">KEYMUN</h3>
+                        <h3 className="text-lg font-semibold mb-4">KMUN</h3>
                         <p className="text-sm">Version 1.0.1</p>
                         <div className="flex items-center space-x-2">
                             <a href="https://keycas.cn" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">

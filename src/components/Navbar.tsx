@@ -28,7 +28,7 @@ const Navbar = () => {
                                     alt="KEYMUN Logo"
                                     className="h-12 w-12 object-contain"
                                 />
-                                <span className="font-bold text-xl text-white">KEYMUN</span>
+                                <span className="font-bold text-xl text-white">KMUN</span>
                             </a>
                         </div>
 
