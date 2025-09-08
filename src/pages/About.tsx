@@ -58,9 +58,6 @@ const HeroAbout = () => {
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
                         KEYMUN Secretariats
                     </h1>
-                    <p className="text-white/90 max-w-2xl mx-auto">
-                        Meet the team behind the conference.
-                    </p>
                 </div>
             </div>
         </div>
@@ -78,12 +75,7 @@ const About = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-6 sm:p-8">
                         <header className="mb-8 sm:mb-10 text-center">
-                            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                                Meet Our Secretariats
-                            </h2>
-                            <p className="mt-2 text-gray-600 text-sm sm:text-base">
-                                Dedicated leaders driving diplomacy and collaboration.
-                            </p>
+
                         </header>
 
                         {/* Responsive grid with consistent heights */}
