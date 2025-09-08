@@ -10,13 +10,17 @@ const members = [
     },
     {
         name: "Doris",
-        photo: "",
+        photo: "/assets/photo/doris.jpg",
         description: "Hey there! I’m Doris and I’m part of the KMUN Secretariat. Since my very first experience as a delegate way back in 2018, MUN has always been something unforgettable. Be it rewarding, like passing your hotly debated resolution after long debate, or challenging, like representing Iran in the UNHRC for your very first conference (!), MUN is rife with opportunity at every corner. To us at KMUN, bringing this vision of engagement into global dialogues and critical reflection is the defining mission of our conference. We hope to see you there.",
     },
     {
-        name: "Yoyo",
-        photo: "/assets/photo/WechatIMG92.jpg",
-        description: "Hi people! I’m Yoyo and I LOVE POLITICS. I've participated in multiple MUNs; has been in different councils such as IAEA, Security Council, SPECPOL, etc. (i can't find the rest); with rewards of best delegate, outstanding delegate, etc. I will be the Co-chair of EU, and I hope to meet you all whom love politics as well there.",
+        name: "Mia",
+        photo: "/assets/photo/mia.jpg",
+        description: "Esteemed delegates and directors, \n" +
+            "\n" +
+            "My name is Mia Cheng, and I am a member of the Keystone Class of 2026. I am honored to serve as the Secretary General & Head of Dais. Now entering my fourth year in MUN, I find myself filled with unforgettable memories of heated debates, thought-provoking negotiations, and, most importantly, lasting relationships with fellow delegates at various conferences. Model United Nations not only opens up a window for me to engage in dialogues regarding pressing global issues, but also establishes the critical mindset that will accompany me in college and beyond( Maybe you would feel the same if you were the delegate of Israel in the Israel-Palestinian Conflict-themed committee). With many others in the KMUN team, we aim to bring MUN experience to you in Keystone Style. Trust me, KMUN will be irreplaceable. \n" +
+            "\n" +
+            "I look forward to meeting you all! ",
     },
     {
         name: "Thomas",
@@ -29,14 +33,11 @@ const members = [
         description: "Hi! I’m a member of the marketing group, and I really enjoy seeing events grow from zero to infinity. I’m looking forward to see our MUN thrive and inspire more students to engage with global issues and critical thinking in future. ",
     },
     {
-        name: "Mia",
-        photo: "/assets/photo/mia.jpg",
-        description: "Esteemed delegates and directors, \n" +
-            "\n" +
-            "My name is Mia Cheng, and I am a member of the Keystone Class of 2026. I am honored to serve as the Secretary General & Head of Dais. Now entering my fourth year in MUN, I find myself filled with unforgettable memories of heated debates, thought-provoking negotiations, and, most importantly, lasting relationships with fellow delegates at various conferences. Model United Nations not only opens up a window for me to engage in dialogues regarding pressing global issues, but also establishes the critical mindset that will accompany me in college and beyond( Maybe you would feel the same if you were the delegate of Israel in the Israel-Palestinian Conflict-themed committee). With many others in the KMUN team, we aim to bring MUN experience to you in Keystone Style. Trust me, KMUN will be irreplaceable. \n" +
-            "\n" +
-            "I look forward to meeting you all! ",
+        name: "Yoyo",
+        photo: "/assets/photo/WechatIMG92.jpg",
+        description: "Hi people! I’m Yoyo and I LOVE POLITICS. I've participated in multiple MUNs; has been in different councils such as IAEA, Security Council, SPECPOL, etc. (i can't find the rest); with rewards of best delegate, outstanding delegate, etc. I will be the Co-chair of EU, and I hope to meet you all whom love politics as well there.",
     },
+
 
 ];
 
