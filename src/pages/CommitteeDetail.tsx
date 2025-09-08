@@ -29,7 +29,7 @@ const CommitteeDetail = () => {
     return (
         <div>
             {/* Header */}
-            <div className="bg-slate-900 text-white py-24">
+            <div className="bg-[#005694] text-white py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h1 className="text-4xl font-bold mb-4">{committee.name}</h1>
                 </div>
