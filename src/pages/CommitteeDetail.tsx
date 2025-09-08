@@ -29,7 +29,7 @@ const CommitteeDetail = () => {
     return (
         <div>
             {/* Header */}
-            <div className="bg-[#005694] text-white py-24">
+            <div className="bg-[#192236] text-white py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h1 className="text-4xl font-bold mb-4">{committee.name}</h1>
                 </div>
@@ -37,7 +37,7 @@ const CommitteeDetail = () => {
         <div className="container mx-auto px-4 py-12">
 
 
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-lg overflow-hidden mb-8">
+            <div className="bg-[#005694] rounded-lg shadow-lg overflow-hidden mb-8">
                 <div className="p-8 text-white">
                     <h1 className="text-2xl font-bold mb-6">{committee.topic}</h1>
 
