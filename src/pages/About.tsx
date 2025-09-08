@@ -56,7 +56,7 @@ const HeroAbout = () => {
             <div className="relative h-full flex items-center justify-center">
                 <div className="text-center px-4">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                        KEYMUN Secretariats
+                        KMUN Secretariats
                     </h1>
                 </div>
             </div>
